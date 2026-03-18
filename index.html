@@ -378,7 +378,7 @@ footer p{font-size:10px;color:rgba(255,255,255,.18);margin-top:3px;letter-spacin
 
 <script>
 // ── CONFIG ──────────────────────────────────────────────────
-const PHONE        = localStorage.getItem('elev8_phone') || '';
+const PHONE = '27799002951';
 const TOTAL_SLOTS  = parseInt(localStorage.getItem('elev8_slots') || '3', 10);
 const USED_DATE    = localStorage.getItem('elev8_slot_date') || '';
 const TODAY        = new Date().toISOString().slice(0,10);
@@ -397,9 +397,6 @@ if (slotsLeft <= 1) {
 (function(){
   let ph = PHONE;
   if (!ph) {
-    ph = prompt('Enter your WhatsApp number (digits only, e.g. 27831234567):\n\nThis is saved locally — only asked once.');
-    if (ph) localStorage.setItem('elev8_phone', ph.replace(/\s/g,''));
-  }
   const url = ph
     ? `https://wa.me/${ph.replace(/\s/g,'')}?text=Hi%20ELEV8%20DIGITAL%20%F0%9F%91%8B%20I%27m%20interested%20in%20your%20services.`
     : 'https://wa.me/?text=Hi%20ELEV8%20DIGITAL%20%F0%9F%91%8B';
